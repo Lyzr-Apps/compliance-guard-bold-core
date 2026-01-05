@@ -1,0 +1,49 @@
+{
+  "agent_name": "Gap Analysis Agent",
+  "agent_id": "695c30e1c2dad05ba69adbfa",
+  "agent_purpose": "analyzer",
+  "description": "Identifies and prioritizes security gaps with severity ratings (Critical, High, Medium, Low) and comprehensive risk assessment including business impact and regulatory risk",
+  "response_schema": {
+    "status": "string (success|error)",
+    "result": {
+      "analysis": "string",
+      "findings": [
+        {
+          "title": "string",
+          "description": "string",
+          "severity": "string (low|medium|high)"
+        }
+      ],
+      "score": "number (optional, 0-100)",
+      "recommendations": [
+        "string"
+      ]
+    },
+    "metadata": {
+      "agent_name": "string",
+      "timestamp": "string (ISO)"
+    }
+  },
+  "example_response": {
+    "status": "success",
+    "result": {
+      "analysis": "Comprehensive analysis of the provided data",
+      "findings": [
+        {
+          "title": "Key Finding 1",
+          "description": "Important observation",
+          "severity": "high"
+        }
+      ],
+      "score": 85,
+      "recommendations": [
+        "Consider optimizing X",
+        "Review Y for improvements"
+      ]
+    },
+    "metadata": {
+      "agent_name": "Gap Analysis Agent",
+      "timestamp": "2025-01-15T10:30:00Z"
+    }
+  }
+}

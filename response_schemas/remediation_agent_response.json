@@ -1,0 +1,60 @@
+{
+  "agent_name": "Remediation Agent",
+  "agent_id": "695c30e2a45696ac999e30e1",
+  "agent_purpose": "recommendation",
+  "description": "Generates prioritized, actionable remediation recommendations with implementation timelines, resource estimates, success criteria, and implementation roadmap organized by phases",
+  "response_schema": {
+    "status": "string (success|error)",
+    "result": {
+      "recommendations": [
+        {
+          "title": "string",
+          "description": "string",
+          "priority": "string (low|medium|high)",
+          "impact": "string"
+        }
+      ],
+      "reasoning": "string",
+      "action_items": [
+        {
+          "task": "string",
+          "deadline": "string (optional)"
+        }
+      ],
+      "alternatives": [
+        "string (optional)"
+      ]
+    },
+    "metadata": {
+      "agent_name": "string",
+      "timestamp": "string (ISO)"
+    }
+  },
+  "example_response": {
+    "status": "success",
+    "result": {
+      "recommendations": [
+        {
+          "title": "Primary Recommendation",
+          "description": "Do this first",
+          "priority": "high",
+          "impact": "Significant improvement expected"
+        }
+      ],
+      "reasoning": "Based on the analysis, these recommendations will help achieve the goal",
+      "action_items": [
+        {
+          "task": "Implement recommendation 1",
+          "deadline": "Next week"
+        }
+      ],
+      "alternatives": [
+        "Alternative approach A"
+      ]
+    },
+    "metadata": {
+      "agent_name": "Remediation Agent",
+      "timestamp": "2025-01-15T10:30:00Z"
+    }
+  }
+}

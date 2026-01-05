@@ -1,0 +1,49 @@
+{
+  "agent_name": "Framework Compliance Agent",
+  "agent_id": "695c30d76363be71980eed5c",
+  "agent_purpose": "analyzer",
+  "description": "Analyzes uploaded documentation against compliance frameworks (SOC2, ISO 27001, GDPR, HIPAA) and identifies specific control requirements met or missing with evidence",
+  "response_schema": {
+    "status": "string (success|error)",
+    "result": {
+      "analysis": "string",
+      "findings": [
+        {
+          "title": "string",
+          "description": "string",
+          "severity": "string (low|medium|high)"
+        }
+      ],
+      "score": "number (optional, 0-100)",
+      "recommendations": [
+        "string"
+      ]
+    },
+    "metadata": {
+      "agent_name": "string",
+      "timestamp": "string (ISO)"
+    }
+  },
+  "example_response": {
+    "status": "success",
+    "result": {
+      "analysis": "Comprehensive analysis of the provided data",
+      "findings": [
+        {
+          "title": "Key Finding 1",
+          "description": "Important observation",
+          "severity": "high"
+        }
+      ],
+      "score": 85,
+      "recommendations": [
+        "Consider optimizing X",
+        "Review Y for improvements"
+      ]
+    },
+    "metadata": {
+      "agent_name": "Framework Compliance Agent",
+      "timestamp": "2025-01-15T10:30:00Z"
+    }
+  }
+}
