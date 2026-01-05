@@ -3,6 +3,9 @@ const nextConfig = {
   // Enable React strict mode for better error handling
   reactStrictMode: true,
 
+  // Disable static pre-rendering to avoid Html import issues
+  staticPageGenerationTimeout: 0,
+
   // Configure hostname for Docker
   // Next.js 13+ automatically binds to 0.0.0.0 when using -H flag
 

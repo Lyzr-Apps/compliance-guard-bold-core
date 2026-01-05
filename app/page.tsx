@@ -1,12 +1,14 @@
 'use client'
 
+export const dynamic = 'force-dynamic'
+
 import React, { useState, useCallback, useRef } from 'react'
 import {
   FiMenu,
   FiX,
   FiHome,
   FiPlus,
-  FiHistory,
+  FiClock,
   FiSettings,
   FiUploadCloud,
   FiChevronDown,
@@ -17,13 +19,12 @@ import {
   FiTrash2,
   FiAlertTriangle,
   FiCheckCircle,
-  FiClock,
   FiTrendingUp,
   FiFileText,
   FiLoader,
   FiChevronRight,
   FiPieChart,
-  FiBarChart3,
+  FiBarChart2,
   FiRefreshCw,
 } from 'react-icons/fi'
 
@@ -186,7 +187,7 @@ function DashboardScreen() {
     {
       label: 'Frameworks',
       value: '4',
-      icon: FiBarChart3,
+      icon: FiBarChart2,
       color: 'text-purple-400',
     },
   ]
@@ -1111,7 +1112,7 @@ export default function App() {
               icon: FiHome,
             },
             { id: 'review-setup', label: 'New Review', icon: FiPlus },
-            { id: 'history', label: 'Review History', icon: FiHistory },
+            { id: 'history', label: 'Review History', icon: FiClock },
             { id: 'settings', label: 'Settings', icon: FiSettings },
           ].map((item) => {
             const Icon = item.icon
